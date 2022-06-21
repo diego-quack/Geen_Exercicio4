@@ -14,6 +14,11 @@ namespace Geen_Exercicio4
         public string Predecessores { get; set; }
 
         List<Linguagem> Linguagens = new List<Linguagem>();
+
+        public Linguagem()
+        {
+        }
+
         public Linguagem(int ano, string nome, string desenvolvedorChefe, string predecessores)
         {
             Ano = ano;
@@ -21,14 +26,28 @@ namespace Geen_Exercicio4
             DesenvolvedorChefe = desenvolvedorChefe;
             Predecessores = predecessores;
         }
-
+        /*
+        public void Imprimir()
+        {
+            var resultado = from linguagem in Linguagens select linguagem;
+            foreach(var linguagem in resultado)
+            {
+                Console.WriteLine($"Nome: {linguagem.Nome} " +
+                                  $"Ano de criação: {linguagem.Ano} " +
+                                  $"Desenvolvedor Chefe {linguagem.Predecessores} " +
+                                  $"Predecessores: {linguagem.DesenvolvedorChefe}");
+            }
+        }
+        */
+        /*
         public void AdicionarLinguagem()
         {
 
         }
         public void RemoverLinguagem()
         {
-
+            Linguagem linguagem = new Linguagem();
+            Linguagens.Remove(linguagem);
         }
         public Linguagem BuscarLinguagemPorNome(string nome)
         {
@@ -45,6 +64,6 @@ namespace Geen_Exercicio4
         public Linguagem BuscarLinguagemPorPredecessor(string nomePredecessor)
         {
 
-        }
+        }*/
     }
 }
