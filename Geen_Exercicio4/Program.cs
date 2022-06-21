@@ -20,20 +20,20 @@ namespace Geen_Exercicio4
 
             Linguagem.AdicionarLinguagem(listaDeLinguagens, new Linguagem
             {
-                Ano = 2000,
-                Nome = "X",
-                DesenvolvedorChefe = "Diego",
-                Predecessores = "x"
+                Ano = 1991,
+                Nome = "Python",
+                DesenvolvedorChefe = "Guido Van Rossum",
+                Predecessores = "Modula-3"
             });
 
-            //Linguagem.RemoverLinguagem(listaDeLinguagens, "Go");
+            //Linguagem.RemoverLinguagem(listaDeLinguagens, 1); //Informar o índice pra remover da lista
 
-            /*Linguagem.BuscarLinguagemPorNome(listaDeLinguagens, "AMOS");
-            Linguagem.BuscarLinguagemPorAno(listaDeLinguagens, 1991);
-            Linguagem.BuscarLinguagemPorDesenvolvedor(listaDeLinguagens, "Yuki");
-            Linguagem.BuscarLinguagemPorPredecessor(listaDeLinguagens, "Oberon");*/
+            //Linguagem.BuscarLinguagemPorNome(listaDeLinguagens, "");
+            //Linguagem.BuscarLinguagemPorAno(listaDeLinguagens, 1991);
+            //Linguagem.BuscarLinguagemPorDesenvolvedor(listaDeLinguagens, "Yuki");
+            //Linguagem.BuscarLinguagemPorPredecessor(listaDeLinguagens, "Oberon");
 
-            Linguagem.Imprimir(listaDeLinguagens);
+            //Linguagem.Imprimir(listaDeLinguagens);
         }
     }
 }

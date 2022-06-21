@@ -39,7 +39,6 @@ namespace Geen_Exercicio4
             foreach (var linguagem in resultado)
             {
                 Console.WriteLine(linguagem);
-                Console.WriteLine();
             }
         }
         public static void BuscarLinguagemPorNome(List<Linguagem> listaDeLinguagens, string nome)
@@ -53,6 +52,7 @@ namespace Geen_Exercicio4
                 Console.WriteLine(linguagem);
                 Console.WriteLine();
             }
+            Console.WriteLine("Não localizado");
         }
         public static void BuscarLinguagemPorAno(List<Linguagem> listaDeLinguagens, int ano)
         {
