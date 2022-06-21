@@ -26,8 +26,8 @@ namespace Geen_Exercicio4
             DesenvolvedorChefe = desenvolvedorChefe;
             Predecessores = predecessores;
         }
-        /*
-        public void Imprimir()
+        
+        /*public void Imprimir()
         {
             var resultado = from linguagem in Linguagens select linguagem;
             foreach(var linguagem in resultado)
