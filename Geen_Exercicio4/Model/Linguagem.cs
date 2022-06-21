@@ -13,8 +13,6 @@ namespace Geen_Exercicio4
         public string DesenvolvedorChefe { get; set; }
         public string Predecessores { get; set; }
 
-        List<Linguagem> Linguagens = new List<Linguagem>();
-
         public Linguagem()
         {
         }
@@ -26,44 +24,78 @@ namespace Geen_Exercicio4
             DesenvolvedorChefe = desenvolvedorChefe;
             Predecessores = predecessores;
         }
-        
-        /*public void Imprimir()
+
+        public static void AdicionarLinguagem(List<Linguagem> listaDeLinguagens, Linguagem novaLinguagem)
         {
-            var resultado = from linguagem in Linguagens select linguagem;
-            foreach(var linguagem in resultado)
+            listaDeLinguagens.Add(novaLinguagem);
+        }
+        public static void RemoverLinguagem(List<Linguagem> listaDeLinguagens, int index)
+        {
+            listaDeLinguagens.Remove(listaDeLinguagens[index]);
+        }
+        public static void Imprimir(List<Linguagem> listaDeLinguagens)
+        {
+            var resultado = from linguagem in listaDeLinguagens select linguagem;
+            foreach (var linguagem in resultado)
             {
-                Console.WriteLine($"Nome: {linguagem.Nome} " +
-                                  $"Ano de criação: {linguagem.Ano} " +
-                                  $"Desenvolvedor Chefe {linguagem.Predecessores} " +
-                                  $"Predecessores: {linguagem.DesenvolvedorChefe}");
+                Console.WriteLine(linguagem);
+                Console.WriteLine();
             }
         }
-        */
-        /*
-        public void AdicionarLinguagem()
+        public static void BuscarLinguagemPorNome(List<Linguagem> listaDeLinguagens, string nome)
         {
+            var dados = from linguagem in listaDeLinguagens
+                        where linguagem.Nome.StartsWith(nome)
+                        select linguagem;
 
+            foreach (var linguagem in dados)
+            {
+                Console.WriteLine(linguagem);
+                Console.WriteLine();
+            }
         }
-        public void RemoverLinguagem()
+        public static void BuscarLinguagemPorAno(List<Linguagem> listaDeLinguagens, int ano)
         {
-            Linguagem linguagem = new Linguagem();
-            Linguagens.Remove(linguagem);
-        }
-        public Linguagem BuscarLinguagemPorNome(string nome)
-        {
+            var dados = from linguagem in listaDeLinguagens
+                        where linguagem.Ano.Equals(ano)
+                        select linguagem;
 
+            foreach (var linguagem in dados)
+            {
+                Console.WriteLine(linguagem);
+                Console.WriteLine();
+            }
         }
-        public Linguagem BuscarLinguagemPorAno(int ano)
+        public static void BuscarLinguagemPorDesenvolvedor(List<Linguagem> listaDeLinguagens, string desenvolvedor)
         {
+            var dados = from linguagem in listaDeLinguagens
+                        where linguagem.DesenvolvedorChefe.Contains(desenvolvedor)
+                        select linguagem;
 
+            foreach (var linguagem in dados)
+            {
+                Console.WriteLine(linguagem);
+                Console.WriteLine();
+            }
         }
-        public Linguagem BuscarLinguagemPorDesenvolvedor(string desenvolvedorChefe)
+        public static void BuscarLinguagemPorPredecessor(List<Linguagem> listaDeLinguagens, string predecessor)
         {
+            var dados = from linguagem in listaDeLinguagens
+                        where linguagem.Predecessores.Contains(predecessor)
+                        select linguagem;
 
+            foreach (var linguagem in dados)
+            {
+                Console.WriteLine(linguagem);
+                Console.WriteLine();
+            }
         }
-        public Linguagem BuscarLinguagemPorPredecessor(string nomePredecessor)
+        public override string ToString()
         {
-
-        }*/
+            return $"Nome: {Nome} \n" +
+                   $"Ano de criação: {Ano} \n" +
+                   $"Desenvolvedor Chefe: {DesenvolvedorChefe} \n" +
+                   $"Predecessores: {Predecessores} \n";
+        }
     }
 }
