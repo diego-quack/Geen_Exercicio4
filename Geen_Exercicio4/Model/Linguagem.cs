@@ -43,51 +43,38 @@ namespace Geen_Exercicio4
         }
         public static void BuscarLinguagemPorNome(List<Linguagem> listaDeLinguagens, string nome)
         {
-            var dados = from linguagem in listaDeLinguagens
-                        where linguagem.Nome.StartsWith(nome)
-                        select linguagem;
+            var dados = listaDeLinguagens.Where(lg => lg.Nome.StartsWith(nome));
 
             foreach (var linguagem in dados)
             {
                 Console.WriteLine(linguagem);
-                Console.WriteLine();
             }
-            Console.WriteLine("Não localizado");
         }
         public static void BuscarLinguagemPorAno(List<Linguagem> listaDeLinguagens, int ano)
         {
-            var dados = from linguagem in listaDeLinguagens
-                        where linguagem.Ano.Equals(ano)
-                        select linguagem;
+            var dados = listaDeLinguagens.Where(lg => lg.Ano.Equals(ano));
 
             foreach (var linguagem in dados)
             {
                 Console.WriteLine(linguagem);
-                Console.WriteLine();
             }
         }
         public static void BuscarLinguagemPorDesenvolvedor(List<Linguagem> listaDeLinguagens, string desenvolvedor)
         {
-            var dados = from linguagem in listaDeLinguagens
-                        where linguagem.DesenvolvedorChefe.Contains(desenvolvedor)
-                        select linguagem;
+            var dados = listaDeLinguagens.Where(lg => lg.DesenvolvedorChefe.Contains(desenvolvedor));
 
             foreach (var linguagem in dados)
             {
                 Console.WriteLine(linguagem);
-                Console.WriteLine();
             }
         }
         public static void BuscarLinguagemPorPredecessor(List<Linguagem> listaDeLinguagens, string predecessor)
         {
-            var dados = from linguagem in listaDeLinguagens
-                        where linguagem.Predecessores.Contains(predecessor)
-                        select linguagem;
+            var dados = listaDeLinguagens.Where(lg => lg.Predecessores.Contains(predecessor));
 
             foreach (var linguagem in dados)
             {
                 Console.WriteLine(linguagem);
-                Console.WriteLine();
             }
         }
         public override string ToString()

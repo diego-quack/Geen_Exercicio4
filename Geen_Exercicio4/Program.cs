@@ -26,12 +26,14 @@ namespace Geen_Exercicio4
                 Predecessores = "Modula-3"
             });
 
+            // - "Des"comentar os métodos para testar: 
+
             //Linguagem.RemoverLinguagem(listaDeLinguagens, 1); //Informar o índice pra remover da lista
 
-            //Linguagem.BuscarLinguagemPorNome(listaDeLinguagens, "");
-            //Linguagem.BuscarLinguagemPorAno(listaDeLinguagens, 1991);
-            //Linguagem.BuscarLinguagemPorDesenvolvedor(listaDeLinguagens, "Yuki");
-            //Linguagem.BuscarLinguagemPorPredecessor(listaDeLinguagens, "Oberon");
+            Linguagem.BuscarLinguagemPorNome(listaDeLinguagens, "Python");
+            Linguagem.BuscarLinguagemPorAno(listaDeLinguagens, 1990);
+            Linguagem.BuscarLinguagemPorDesenvolvedor(listaDeLinguagens, "Yuki");
+            Linguagem.BuscarLinguagemPorPredecessor(listaDeLinguagens, "Oberon");
 
             //Linguagem.Imprimir(listaDeLinguagens);
         }
