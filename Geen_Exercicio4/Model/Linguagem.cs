@@ -43,7 +43,7 @@ namespace Geen_Exercicio4
         }
         public static void BuscarLinguagemPorNome(List<Linguagem> listaDeLinguagens, string nome)
         {
-            var dados = listaDeLinguagens.Where(lg => lg.Nome.StartsWith(nome));
+            var dados = listaDeLinguagens.Where(lg => lg.Nome.StartsWith(nome)).DefaultIfEmpty();
 
             foreach (var linguagem in dados)
             {
@@ -52,7 +52,7 @@ namespace Geen_Exercicio4
         }
         public static void BuscarLinguagemPorAno(List<Linguagem> listaDeLinguagens, int ano)
         {
-            var dados = listaDeLinguagens.Where(lg => lg.Ano.Equals(ano));
+            var dados = listaDeLinguagens.Where(lg => lg.Ano.Equals(ano)).DefaultIfEmpty();
 
             foreach (var linguagem in dados)
             {
@@ -61,7 +61,7 @@ namespace Geen_Exercicio4
         }
         public static void BuscarLinguagemPorDesenvolvedor(List<Linguagem> listaDeLinguagens, string desenvolvedor)
         {
-            var dados = listaDeLinguagens.Where(lg => lg.DesenvolvedorChefe.Contains(desenvolvedor));
+            var dados = listaDeLinguagens.Where(lg => lg.DesenvolvedorChefe.Contains(desenvolvedor)).DefaultIfEmpty();
 
             foreach (var linguagem in dados)
             {
@@ -70,7 +70,7 @@ namespace Geen_Exercicio4
         }
         public static void BuscarLinguagemPorPredecessor(List<Linguagem> listaDeLinguagens, string predecessor)
         {
-            var dados = listaDeLinguagens.Where(lg => lg.Predecessores.Contains(predecessor));
+            var dados = listaDeLinguagens.Where(lg => lg.Predecessores.Contains(predecessor)).DefaultIfEmpty();
 
             foreach (var linguagem in dados)
             {
